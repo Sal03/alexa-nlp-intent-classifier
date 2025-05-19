@@ -179,10 +179,6 @@ Then we test ours skill, basic intent.
 
 ![Testing Hello World Intent](resources/8-testing-hello-world-intent.png)
 
-## Deliverable 3
-
-### Goals
-
 - Integrate Alexa with Shopify API
 - Documented Shopify integration
 
@@ -222,7 +218,8 @@ Go to https://shopify.dev/ and sign in with your developer account and create a 
 
 Go to you store and sign in with you dev account and go home/apps and create a private app, this going to enable the Admin API.
 
-![Create private app](resources/create-private-app-1.png)
+<img width="1268" alt="image" src="https://github.com/user-attachments/assets/64140bb0-ff65-4bfb-b39f-2a33ef959f3f" />
+
 ![Create private app](resources/create-private-app-2.png)
 
 

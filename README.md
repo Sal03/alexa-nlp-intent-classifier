@@ -356,6 +356,9 @@ const ShowProductsIntentHandler = {
 
 ## 🧠 NLP Integration with Hugging Face Transformers
 
+<img width="1294" alt="image" src="https://github.com/user-attachments/assets/32fad2d8-171c-43c1-8fb0-0f5611265e48" />
+
+
 ### 🔍 What and Why?
 
 To enhance the flexibility and intelligence of Alexa in understanding a wide range of user queries, this project uses **zero-shot text classification** via the [Hugging Face Transformers](https://huggingface.co/transformers/) library.

@@ -1,0 +1,24 @@
+@startuml
+
+package EchoDot <<node>> {
+  component VoiceShopSkill {
+  }
+}
+
+
+package AWSCloud <<node>> {
+  component VoiceShopApp <<Lambda App>> {
+  }
+}
+
+package Shopify <<node>> {
+  component VoiceShop {
+  
+  }
+}
+
+
+VoiceShopSkill --0)- VoiceShopApp
+VoiceShopApp --0)- VoiceShop
+  
+@enduml

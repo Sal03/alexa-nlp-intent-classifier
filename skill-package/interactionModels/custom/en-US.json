@@ -1,0 +1,64 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "daily product",
+      "intents": [
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "ShowProductOfTheDayIntent",
+          "samples": [
+            "show me a new product",
+            "show me a product",
+            "show product"
+          ]
+        },
+        {
+          "name": "CheckProductPriceIntent",
+          "samples": [
+            "check product price",
+            "check price",
+            "price"
+          ]
+        },
+        {
+          "name": "CheckProductAvailabilityIntent",
+          "samples": [
+            "check product availability",
+            "check availability",
+            "availability"
+          ]
+        },
+        {
+          "name": "AddProductToCartIntent",
+          "samples": [
+            "add product to cart",
+            "add product",
+            "add"
+          ]
+        },
+        {
+          "name": "PlaceOrderIntent",
+          "samples": [
+            "place an order",
+            "place order",
+            "place",
+            "order"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "prompts": []
+  }
+}

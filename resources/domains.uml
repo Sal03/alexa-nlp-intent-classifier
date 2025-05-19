@@ -1,0 +1,7 @@
+@startuml
+(User) --> (Cart): has
+(Cart) -up-> (Products): has
+(User) -up-> (Products): buy
+(User) --> (Orders): place
+(Orders) --> (Products): has 
+@enduml

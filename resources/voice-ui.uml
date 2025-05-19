@@ -1,0 +1,45 @@
+@startuml
+
+start
+
+:Welcome;
+note right: Indication how to use the skill
+
+while (Ask to load all products, search or place a order) is (yes)
+
+
+if (Load all product?) then (yes)
+  :List products;
+else (no)
+  :Ask for query term;
+  :Search products;
+  :List products;
+endif
+
+while (Load more product?) is (Yes)
+  :List products;
+endwhile (selected?)
+
+:Check product prices;
+:Check product availability;
+
+if (Add product to cart?) then (yes)
+  :Add to cart;
+endif
+
+endwhile (Do you want to place the current order?)
+
+:Review orders; 
+note right: List products, total price to buy
+
+if (Confirm the order?) then (yes)
+  :Place the order;
+  :Present confirmation number;
+endif
+
+:start over;
+
+stop
+
+  
+@enduml

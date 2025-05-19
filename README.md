@@ -5,6 +5,8 @@
 This Project consists of a voice command assistant that will allow you to make online purchases in an online store site based on Shopify.
 
 The Alexa-based device should be a channel for requests to add products to the shopping cart.
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/3f2ea419-46b0-4e0c-b948-c25e2b4890f1" />
+
 
 #### Uses cases
 

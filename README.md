@@ -245,8 +245,10 @@ Before to start the integration, you must have set up a Shopify dev account.
 
 Go to https://shopify.dev/ and sign in with your developer account and create a new store, this going to allow you to work with Shopify without any cost.
 
-![Create store](resources/create-store-1.png)
-![Create store](resources/create-store-2.png)
+<img width="1186" alt="image" src="https://github.com/user-attachments/assets/ca856f63-49cc-4398-a0b7-bfd7cef32083" />
+<img width="1268" alt="image" src="https://github.com/user-attachments/assets/53d73ac3-9239-43c0-b0f7-01dd779dd6f0" />
+
+
 
 #### 2 - Setup admin API
 
@@ -381,15 +383,52 @@ const ShowProductsIntentHandler = {
 }
 ```
 
-## Deliverable 4
-
-### Goals
-
-- Demo of the Alexa Skill Working
-
-### Overview
-
-For this deliverable we present the demo of the skill working.
 
 ![Demo 1](resources/demo-1.png)
 ![Demo 2](resources/demo-2.png)
+
+🔍 NLP Intent Classification (Hugging Face)
+To enhance the Alexa Skill with flexible understanding of user queries, I integrated an NLP classifier using the zero-shot-classification pipeline from Hugging Face 🤖.
+
+🔧 What Was Used
+Model: facebook/bart-large-mnli
+
+Library: transformers from Hugging Face
+
+Pipeline Type: Zero-Shot Classification
+
+Integration: Inside Flask endpoint handling Alexa POST requests
+
+🧠 Why I Used It
+Traditional intent detection is rigid (relies on static utterances).
+
+Hugging Face’s zero-shot model allows classification of dynamic queries without retraining a model.
+
+This makes the skill more intelligent, understanding new phrases and classifying them based on a few predefined labels like "get_product", "track_order", etc.
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+MIT License
+
+Copyright (c) 2025 Saloni Angre
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

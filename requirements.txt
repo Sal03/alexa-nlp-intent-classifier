@@ -1,0 +1,43 @@
+
+---
+
+## 📦 Folder Structure
+
+alexa-nlp-intent-classifier/
+├── app.py # Main Flask app connected to Alexa
+├── test_request.py # Local testing script using requests
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+└── screenshots/ # Optional: Visuals of the workflow
+
+---
+
+📚 Tech Stack
+Python 3
+
+Flask
+
+Hugging Face Transformers (facebook/bart-large-mnli)
+
+Ngrok
+
+Alexa Developer Console
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-Sal03/alexa-nlp-intent-classifier.git
+cd alexa-nlp-intent-classifier
+
+2. Install dependencies
+pip install -r requirements.txt
+
+3. Run Flask server
+python app.py
+
+4. Tunnel via Ngrok
+ngrok http 5050
+
+5. Update Alexa Endpoint
+Copy the https://xxxxx.ngrok-free.app URL and paste it in the Alexa Developer Console under Endpoint > HTTPS.

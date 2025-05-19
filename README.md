@@ -20,18 +20,6 @@ The Alexa-based device should be a channel for requests to add products to the s
 - Define the solution overview 
 - Document the reason of the technology selection 
 
-#### Domain 
-
-<img src="resources/domains.png">
-
-#### Components
-
-<img src="resources/components.png">
-
-#### Flow/Voice UI 
-
-<img src="resources/voice-ui.png">
-
 ### Technology Stack
 
 Here is technology stack benchmark and selection.
@@ -114,8 +102,6 @@ Here is technology stack benchmark and selection.
     </tr>
   </tbody>
 </table>
-
-## Deliverable 2
 
 ### Goals
 

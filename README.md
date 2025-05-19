@@ -1,22 +1,6 @@
-# Project #1 - Shopping Voice Service
 
-## Participants
 
-```
-Lorna Flerida Espinosa Cuello / 20145845
-Dante Faña Badia / 20156079
-```
-
-## Document Purpose
-
-This document has as purpose to define in big scale all project decision and components, also have the documentation of the project.
-
-### Audience
-
-- Professor and monitors: to evaluate and get feedbacks from them.
-- Peers students: to share knowledge and ideas.
-
-### Solution Overview
+###  Overview
 
 This Project consists of a voice command assistant that will allow you to make online purchases in an online store site based on Shopify.
 
@@ -24,13 +8,11 @@ The Alexa-based device should be a channel for requests to add products to the s
 
 #### Uses cases
 
-##### Must have 
+##### Requirements 
 - Add product to shopping cart 
 - Check product price
 - Check product availability
 - Simulate online purchase checkout
-
-## Deliverable 1
 
 ### Goals
 

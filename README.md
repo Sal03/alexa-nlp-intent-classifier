@@ -354,24 +354,55 @@ const ShowProductsIntentHandler = {
 ![Demo 1](resources/demo-1.png)
 ![Demo 2](resources/demo-2.png)
 
-🔍 NLP Intent Classification (Hugging Face)
-To enhance the Alexa Skill with flexible understanding of user queries, I integrated an NLP classifier using the zero-shot-classification pipeline from Hugging Face 🤖.
+## 🧠 NLP Integration with Hugging Face Transformers
 
-🔧 What Was Used
-Model: facebook/bart-large-mnli
+### 🔍 What and Why?
 
-Library: transformers from Hugging Face
+To enhance the flexibility and intelligence of Alexa in understanding a wide range of user queries, this project uses **zero-shot text classification** via the [Hugging Face Transformers](https://huggingface.co/transformers/) library.
 
-Pipeline Type: Zero-Shot Classification
+Traditional Alexa skills rely on fixed intents and utterances, which can be limiting. By integrating an NLP model, we allow Alexa to **understand new, unseen phrases** and dynamically map them to appropriate intents.
 
-Integration: Inside Flask endpoint handling Alexa POST requests
+> ✅ Model used: [`facebook/bart-large-mnli`](https://huggingface.co/facebook/bart-large-mnli)
 
-🧠 Why I Used It
-Traditional intent detection is rigid (relies on static utterances).
+Reasons for choosing this model:
+- Strong performance in multi-class classification
+- Generalizes to a wide variety of user inputs
+- Easy to integrate using the `pipeline` API
 
-Hugging Face’s zero-shot model allows classification of dynamic queries without retraining a model.
+---
 
-This makes the skill more intelligent, understanding new phrases and classifying them based on a few predefined labels like "get_product", "track_order", etc.
+### 🛠️ How It Works
+
+1. Alexa sends user input as a POST request to the Flask app.
+2. The raw utterance is passed to the NLP model instead of being hardcoded via slot values.
+3. A predefined list of possible intents is given to the model.
+4. The model returns the most probable intent, which is then sent back to Alexa in the correct JSON response format.
+
+---
+
+### 📦 Code Example
+
+```python
+from transformers import pipeline
+
+classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+
+labels = ["get_product", "ask_offer", "track_order", "ask_help"]
+result = classifier(user_input, labels)
+top_intent = result['labels'][0]
+
+🔗 Where It’s Used
+app.py – inside the alexa_handler() route
+
+The result from the NLP model is wrapped in Alexa's JSON structure using Flask's jsonify()
+
+🚀 Benefits
+Supports more flexible voice input
+
+Doesn’t rely entirely on Alexa's rigid slot types
+
+Enables smart fallback behavior (defaults to "ask_help" if no match)
+
 
 
 ## 📄 License
